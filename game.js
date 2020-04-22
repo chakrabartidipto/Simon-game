@@ -25,6 +25,14 @@ $(document).keydown(function() {
     }
   });
 
+  $(".touchpad").on("click",function() {
+    if (!started) {
+      $("#level-title").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+  });
+
 // 2. User interaction through click
 
 $(".btn").on("click",function(){
